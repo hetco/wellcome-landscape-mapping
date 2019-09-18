@@ -1,0 +1,245 @@
+/* body/global */
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif !important;
+	padding:20px;
+}
+
+.content {
+	padding-left:15px;
+	padding-right:15px;
+	margin-bottom:20px;
+}
+
+.lastpara {
+    margin-bottom:60px;
+}
+
+p {
+	font-size:1.2em;
+}
+
+.subheading {
+	font-weight:600;
+	margin-top:20px;
+}
+
+a {
+	color: #000;
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+/* header and nav */
+
+
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+
+   	.navbar-nav li a:hover, .navbar-nav > .active > a {
+		background-position: center top;
+	}
+}
+
+.brandtitle {
+	font-size:2em;
+	text-align:center;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+
+.hetco-nav a {
+    color:#fff;
+    font-size:1em;
+    text-decoration:  none;
+    
+}
+
+.brandtitle a {
+	color:#fff;
+	text-decoration:  none;
+	font-size:2em;
+}
+
+#brandtitle {
+	font-size:1.4em;
+	font-weight:800;
+}
+
+.navbar {
+	margin-bottom:0px;
+}
+
+@media (max-width: 768px) {
+	.navbar-nav {
+		margin-left:20px;
+	}
+
+	.navbar-nav li a:hover, .navbar-nav > .active > a {
+		background-position: 15px top;
+	}
+}
+
+.navbar-nav li a {
+  padding-top:15px;
+  color:#fff;
+}
+
+.navbar-nav li a:hover {
+  padding-top:15px;
+  color:#fff;
+  background-color:rgba(0,0,0,0);
+  text-decoration: underline;
+}
+
+
+/* footer */
+
+.rightalign {
+	text-align:right;
+}
+
+.footer {
+    background-color:#2699FB;
+    color:#ffffff;
+    margin-left:0px;
+    margin-right:0px;
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.footer a {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+/* wellcome specific */
+
+.wellcomecontainer {
+	padding:20px;
+}
+
+.wellcometextboxsolid {
+	padding:10px 20px;
+	color:#2699FB;
+}
+
+.highlight {
+    background-color: #FFFFFF;
+    color: #2699FB;
+    display:inline;
+    white-space:pre-wrap;
+    font-size: 18px;
+    font-family:arial, sans-serif;
+    padding: 5px;padding-left:0px;box-shadow: -8px 0 0 #FFFFFF;
+    margin-left:-8px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.wellcometextboxtrans {
+	background-color:rgba(255, 255, 255, 0.3);
+	padding:10px 20px;
+	color:#fff;
+	border:1px solid #ffffff;
+	font-size:1.6em;
+	font-weight:800;
+}
+
+
+#landingbox {
+	margin-top:40px;
+}
+
+#maintitle {
+	margin-top:10px;
+	padding:15px;
+	margin-left:-15px;
+	padding-bottom:15px;
+	line-height:1.25em;
+	font-size:2em;
+	font-weight:800;
+	background-color:#fff;
+}
+
+.smalltitle {
+	line-height:1.25em;
+	color:#fff;
+}
+
+.smalltitle a {
+	color:#fff;
+}
+
+#subcontainer {
+	background-image: url('../images/data-for-science-health-1600x578px.jpg');
+  	background-repeat: repeat;
+	background-size: 2000px;
+	padding-bottom:80px;
+}
+
+#mapcontainerpage {
+	background-color: #cbcbcb;
+}
+
+
+/* mapping page */
+#map {
+	height:800px;
+	width:100%;
+}
+
+#mapcontainer {
+	border-top: 1px solid #fff;
+}
+
+.infohovertext {
+	font-size:2em;
+}
+
+.infohoverdetails {
+	background-color:white;
+	width:400px;
+	max-width: 90%;
+	padding:20px;
+}
+
+.infohovertitle {
+	font-size:1.6em;
+	font-weight:600;
+}
+
+.infohover {
+	text-align: right;
+	max-width:800px;
+}
+
+/* goalspage */
+
+#goalscontainer {
+	background-color:white;
+	padding-bottom:80px;
+}
+
+.goalsnavbar {
+	color:#2699FB !important;
+}
+
+#goalsdetails {
+	margin-top:24px;
+}
+
+/* methodology */
+
+#explore_images {
+	margin-top:60px;
+}
