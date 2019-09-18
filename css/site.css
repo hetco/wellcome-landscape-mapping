@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-nav li a {
   padding-top:15px;
   color:#fff;
+  text-decoration: underline;
 }
 
 .navbar-nav li a:hover {
@@ -115,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a {
     color:#fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .hetcologo {
@@ -123,10 +124,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:800;
 	margin:0px;
 	line-height:1;
+
 }
 
 .hetcologo a {
 	color:#fff;
+	text-decoration: none;
 }
 
 .logo {
