@@ -99,6 +99,8 @@ function addDataToMap(map,paperData,orgsData){
         $('.infohoverdetails').hide();
     });
 
+    circles = [];
+
 	orgsData.forEach(function(d,i){
 		let circle = L.circleMarker([d['#geo+lat'],d['#geo+lon']],style).addTo(map);
 
@@ -128,7 +130,12 @@ function addDataToMap(map,paperData,orgsData){
             });
             infoDetails.update(d['#org'],papers);
         });
+
+        circles.push(circle);
 	});
+
+    var group = new L.featureGroup(circles);
+    map.fitBounds(group.getBounds().pad(0.1));
 }
 
 function paperToHTML(papers){
