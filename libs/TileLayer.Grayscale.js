@@ -46,8 +46,8 @@ L.TileLayer.Grayscale = L.TileLayer.extend({
 			g = pix[i + 1];
 			b = pix[i + 2];
 			grey = (this.options.quotaRed * r + this.options.quotaGreen * g + this.options.quotaBlue * b) / this.options.quotaDivider();
-			pix[i] = 255-(255-grey)*(255-38)/51;
-			pix[i + 1] = 255-(255-grey)*(255-153)/44;
+			pix[i] = 255-(255-grey)*(255-40)/51;
+			pix[i + 1] = 255-(255-grey)*(255-170)/44;
 			pix[i + 2] = 255-(255-grey)*(255-251)/44;
 		}
 		ctx.putImageData(imgd, 0, 0);
