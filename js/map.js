@@ -63,6 +63,10 @@ function addDataToMap(map,paperData,orgsData){
 
     info.addTo(map);
 
+    if($(window).width<700){
+        $('.infohover').hide();
+    }
+
     //$('.info').on('mouseover',function(){infoBox = true;});
     //$('.info').on('mouseout',function(){infoBox = false;info.update();});  
 
