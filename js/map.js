@@ -135,7 +135,7 @@ function addDataToMap(map,paperData,orgsData){
 	});
 
     var group = new L.featureGroup(circles);
-    map.fitBounds(group.getBounds().pad(0.1));
+    map.fitBounds(group.getBounds().pad(-0.2));
 }
 
 function paperToHTML(papers){
