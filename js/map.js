@@ -63,7 +63,7 @@ function addDataToMap(map,paperData,orgsData){
 
     info.addTo(map);
 
-    if($(window).width<700){
+    if($(window).width()<700){
         $('.infohover').hide();
     }
 
