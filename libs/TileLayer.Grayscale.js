@@ -6,7 +6,7 @@ L.TileLayer.Grayscale = L.TileLayer.extend({
 	options: {
 		quotaRed: 21,
 		quotaGreen: 71,
-		quotaBlue: 8,
+		quotaBlue: 10,
 		quotaDividerTune: 0,
 		quotaDivider: function() {
 			return this.quotaRed + this.quotaGreen + this.quotaBlue + this.quotaDividerTune;
@@ -42,7 +42,13 @@ L.TileLayer.Grayscale = L.TileLayer.extend({
 		var imgd = ctx.getImageData(0, 0, canvas.width, canvas.height);
 		var pix = imgd.data;
 		for (var i = 0, n = pix.length; i < n; i += 4) {
-			pix[i] = pix[i + 1] = pix[i + 2] = (this.options.quotaRed * pix[i] + this.options.quotaGreen * pix[i + 1] + this.options.quotaBlue * pix[i + 2]) / this.options.quotaDivider();
+			r = pix[i];
+			g = pix[i + 1];
+			b = pix[i + 2];
+			grey = (this.options.quotaRed * r + this.options.quotaGreen * g + this.options.quotaBlue * b) / this.options.quotaDivider();
+			pix[i] = 255-(255-grey)*(255-38)/51;
+			pix[i + 1] = 255-(255-grey)*(255-153)/44;
+			pix[i + 2] = 255-(255-grey)*(255-251)/44;
 		}
 		ctx.putImageData(imgd, 0, 0);
 		img.setAttribute('data-grayscaled', true);

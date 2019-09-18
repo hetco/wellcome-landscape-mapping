@@ -44,8 +44,8 @@ function addDataToMap(map,paperData,orgsData){
         color: '#EC69D7'
     }
 
-    let infoBox = false;
-    let circleOver = false;
+    //let infoBox = false;
+    //let circleOver = false;
 
 	let info = L.control();
 
@@ -63,8 +63,8 @@ function addDataToMap(map,paperData,orgsData){
 
     info.addTo(map);
 
-    $('.info').on('mouseover',function(){infoBox = true;});
-    $('.info').on('mouseout',function(){infoBox = false;info.update();});  
+    //$('.info').on('mouseover',function(){infoBox = true;});
+    //$('.info').on('mouseout',function(){infoBox = false;info.update();});  
 
     let infoDetails = L.control({position: 'topleft'});
 
@@ -75,33 +75,48 @@ function addDataToMap(map,paperData,orgsData){
 
     infoDetails.update = function (org,papers) { 
         let paperText = paperToHTML(papers);
-        let text = '<p class="infohovertitle">'+org+'</p>'
+        let text = '<button id="closebutton" type="button" class="btn btn-default">X</button><p class="infohovertitle">'+org+'</p><p>Example papers:</p>'
         this._div.innerHTML = text+paperText;
+
+        $('#closebutton').on('click',function(e){
+            $('.infohoverdetails').hide();
+        });
     };
 
     infoDetails.addTo(map);
 
+    $('.infohoverdetails').on('click',function(event){
+        event.stopPropagation();
+    });
+
     $('.infohoverdetails').hide();
+
+    $(window).click(function() {
+        $('.infohoverdetails').hide();
+    });
 
 	orgsData.forEach(function(d,i){
 		let circle = L.circleMarker([d['#geo+lat'],d['#geo+lon']],style).addTo(map);
 
 		circle.on('mouseover',function(){
-            circleOver = true;
+            console.log('mouseover');
+            //circleOver = true;
             info.update(d['#org']);
         });
 
         circle.on('mouseout',function(){
-            circleOver = false;
+            console.log('mouseout');
+            //circleOver = false;
             info.update();
-            setTimeout(function(){
+           /* setTimeout(function(){
                 if(infoBox==false && circleOver==false){
                 info.update();
                  }
-            },100);
+            },100);*/
         });
 
-        circle.on('click',function(){
+        circle.on('click',function(event){
+            event.originalEvent.stopPropagation();
         	$('.infohoverdetails').show();
             papers = []
             paperData.forEach(function(p){

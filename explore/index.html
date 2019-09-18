@@ -27,28 +27,48 @@
         </script>
     </head>
     <body>
-        <div id="mapcontainerpage">
+        <div id="goalscontainer">
             <nav class="navbar hetco-nav">
                 <div class="" id="myNavbar">
                     <div class="navbar-header">
                         <div class="col-sm-6">
-                            <a id="brandtitle" class="navbar-brand" href="/">Data for Science and Health: Innovation that Benefits Everyone</a>
+                            <a id="brandtitle" class="navbar-brand goalsnavbar" href="https://wellcome.ac.uk/what-we-do/our-work/data-science-and-health-innovation-benefits-everyone">Data for Science and Health: Innovation that Benefits Everyone - Landscape Mapping</a>
                         </div>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/goals">GOALS</a></li>
-                        <li><a href="/methodology">METHODOLOGY</a></li>
-                        <li><a href="/explore">EXPLORE</a></li>
-                        <li><a href="/schedule">SCHEDULE</a></li>
-                        <li><a href="/contact">CONTACT</a></li>
+                        <li><a class="goalsnavbar" href="/explore">EXPLORE</a></li>
+                        <li><a class="goalsnavbar" href="/schedule">SCHEDULE</a></li>
                     </ul>
                 </div>
             </nav>        
             <div id="mapcontainer" class="container-fluid">
+                <p>This landscape map is a work in progress and currently represent our findings from broad automated approach.</p>
                 <div id="map">
-                    
+
                 </div>
             </div>
+        </div>
+        <div class="container-fluid">
+            <div class="footer">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>Contact: <a href="mailto:landscapemapping@hetco.io">landscapemapping@hetco.io</a></p>
+                        <p><a href="https://drive.google.com/file/d/1vnDvzDb8Y5-Zv1Bt_onKie2lEf45wd0p/view?usp=sharing" target="_blank">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-md-2 col-xs-6 logo">
+                        <p class="hetcologo"><a href="https://hetco.io/" target="_blank">Hetco</a></p>
+                        <p class="hetcologo"><a href="https://hetco.io/" target="_blank">Design</a></p>
+                    </div>
+                    <div class="col-md-2 col-xs-6 logo">
+                        <a href="https://wellcome.ac.uk/" target="_blank"><img width="100px" src="../images/wellcome_logo.svg" alt="wellcome_logo"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="copyright" class="col-md-12">
+                        <p>© Hetco Design 2019</p>
+                    </div>
+                </div>
+            </div>                                      
         </div>
         <script src="../js/map.js"></script>
     </body>
