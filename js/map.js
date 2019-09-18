@@ -103,13 +103,11 @@ function addDataToMap(map,paperData,orgsData){
 		let circle = L.circleMarker([d['#geo+lat'],d['#geo+lon']],style).addTo(map);
 
 		circle.on('mouseover',function(){
-            console.log('mouseover');
             //circleOver = true;
             info.update(d['#org']);
         });
 
         circle.on('mouseout',function(){
-            console.log('mouseout');
             //circleOver = false;
             info.update();
            /* setTimeout(function(){
