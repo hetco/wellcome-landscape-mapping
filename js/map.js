@@ -14,7 +14,7 @@ function initMap(){
 
 function loadData(map){
 	let url = 'https://proxy.hxlstandard.org/data.json?strip-headers=on&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1JnutJR1cnjRBpUNKqSMAS7D65BiJzXx8C814y_MTN34%2Fedit%23gid%3D0';
-	console.log('loading data');
+
 	var orgsCall = $.ajax({ 
 	    type: 'GET', 
 	    url: url,
@@ -39,9 +39,9 @@ function addDataToMap(map,paperData,orgsData){
 
     let style = {
         className: 'circlepoint',
-        fillOpacity: 0.75,
+        fillOpacity: 0.8,
         radius: 8,
-        color: '#EC69D7'
+        color: '#ED858E'
     }
 
     //let infoBox = false;
