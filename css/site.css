@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-    background-color:#2699FB;
+    background-color:#009BB2;
     color:#fff;
     margin-left:-20px;
     margin-right:-20px;
@@ -144,12 +144,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .wellcometextboxsolid {
 	padding:10px 20px;
-	color:#2699FB;
+	color:#009BB2;
 }
 
 .highlight {
     background-color: #FFFFFF;
-    color: #2699FB;
+    color: #009BB2;
     display:inline;
     white-space:pre-wrap;
     font-size: 18px;
@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .goalsnavbar {
-	color:#2699FB !important;
+	color:#009BB2 !important;
 	font-weight:800;
 }
 
@@ -269,5 +269,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .leaflet-container {
-    background-color: #2699FB;
+    background-color: #009BB2;
 }
