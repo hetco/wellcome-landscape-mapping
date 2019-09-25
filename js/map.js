@@ -124,7 +124,7 @@ function addDataToMap(map,paperData,orgsData){
         	$('.infohoverdetails').show();
             papers = []
             paperData.forEach(function(p){
-                if(p['#meta+id']==i){
+                if(p['#org+id']==d['#org+id']){
                     papers.push(p);
                 }
             });
